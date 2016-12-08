@@ -36,19 +36,19 @@ class final_topo(Topo):
     # Host 10 to Floor 1
     self.addLink(s1,h1, port1=1, port2=0)
     # Host 20 to Floor 2
-    self.addLink(s1,h2, port1=1, port2=0)
+    self.addLink(s2,h2, port1=1, port2=0)
     # Host 30 to Floor 3
-    self.addLink(s1,h3, port1=1, port2=0)
+    self.addLink(s3,h3, port1=1, port2=0)
     # Floor 1 connect to Core Switch
-    self.addLink(s3,h4, port1=2, port2=3)
+    self.addLink(s1,s4, port1=2, port2=3)
     # Floor 2 connect to Core Switch
-    self.addLink(s4,h5, port1=2, port2=4)
+    self.addLink(s2,s4, port1=2, port2=4)
     # Floor 3 connect to Core Switch
     self.addLink(s3,s4, port1=2, port2=5)
     # Untrusted Host connect to Core Switch
     self.addLink(s4,h4, port1=6, port2=0)
     # Core Switch connect to Data Center
-    self.addLink(s4,h5, port1=7, port2=2)
+    self.addLink(s4,s5, port1=7, port2=2)
     # Server connect to Data Center
     self.addLink(s5,h5, port1=1, port2=0)
 

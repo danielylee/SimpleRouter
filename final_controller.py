@@ -59,79 +59,79 @@ class Final (object):
                 msg.hard_timeout = 30
                 msg.data = packet_in
                 self.connection.send(msg)
-        elif packet.find('ipv4') is not None and port_on_switch == 6:
-            if packet.find('ipv4').dstip == ('10.0.1.10'):
-                msg = of.ofp_flow_mod()
-                msg.match = of.ofp_match.from_packet(packet)
-                msg.idle_timeout = 30
-                msg.hard_timeout = 30
-                msg.actions.append(of.ofp_action_output(port = 3))
-                msg.data = packet_in
-                self.connection.send(msg)
-            elif packet.find('ipv4').dstip == ('10.0.2.20'):
-                msg = of.ofp_flow_mod()
-                msg.match = of.ofp_match.from_packet(packet)
-                msg.idle_timeout = 30
-                msg.hard_timeout = 30
-                msg.actions.append(of.ofp_action_output(port = 4))
-                msg.data = packet_in
-                self.connection.send(msg)
-            elif packet.find('ipv4').dstip == ('10.0.3.30'):
-                msg = of.ofp_flow_mod()
-                msg.match = of.ofp_match.from_packet(packet)
-                msg.idle_timeout = 30
-                msg.hard_timeout = 30
-                msg.actions.append(of.ofp_action_output(port = 5))
-                msg.data = packet_in
-                self.connection.send(msg)
-            elif packet.find('ipv4').dstip == ('10.0.4.10'):
-                msg = of.ofp_flow_mod()
-                msg.match = of.ofp_match.from_packet(packet)
-                msg.idle_timeout = 30
-                msg.hard_timeout = 30
-                msg.data = packet_in
-                self.connection.send(msg)
-        else:
-            if packet.find('ipv4').dstip == ('10.0.1.10'):
-                msg = of.ofp_flow_mod()
-                msg.match = of.ofp_match.from_packet(packet)
-                msg.idle_timeout = 30
-                msg.hard_timeout = 30
-                msg.actions.append(of.ofp_action_output(port = 3))
-                msg.data = packet_in
-                self.connection.send(msg)
-            elif packet.find('ipv4').dstip == ('10.0.2.20'):
-                msg = of.ofp_flow_mod()
-                msg.match = of.ofp_match.from_packet(packet)
-                msg.idle_timeout = 30
-                msg.hard_timeout = 30
-                msg.actions.append(of.ofp_action_output(port = 4))
-                msg.data = packet_in
-                self.connection.send(msg)
-            elif packet.find('ipv4').dstip == ('10.0.3.30'):
-                msg = of.ofp_flow_mod()
-                msg.match = of.ofp_match.from_packet(packet)
-                msg.idle_timeout = 30
-                msg.hard_timeout = 30
-                msg.actions.append(of.ofp_action_output(port = 5))
-                msg.data = packet_in
-                self.connection.send(msg)
-            elif packet.find('ipv4').dstip == ('10.0.4.10'):
-                msg = of.ofp_flow_mod()
-                msg.match = of.ofp_match.from_packet(packet)
-                msg.idle_timeout = 30
-                msg.hard_timeout = 30
-                msg.actions.append(of.ofp_action_output(port = 7))
-                msg.data = packet_in
-                self.connection.send(msg)
-            elif packet.find('ipv4').dstip == ('172.16.10.100'):
-                msg = of.ofp_flow_mod()
-                msg.match = of.ofp_match.from_packet(packet)
-                msg.idle_timeout = 30
-                msg.hard_timeout = 30
-                msg.actions.append(of.ofp_action_output(port = 6))
-                msg.data = packet_in
-                self.connection.send(msg)
+            elif packet.find('ipv4') is not None and port_on_switch == 6:
+                if packet.find('ipv4').dstip == ('10.0.1.10'):
+                    msg = of.ofp_flow_mod()
+                    msg.match = of.ofp_match.from_packet(packet)
+                    msg.idle_timeout = 30
+                    msg.hard_timeout = 30
+                    msg.actions.append(of.ofp_action_output(port = 3))
+                    msg.data = packet_in
+                    self.connection.send(msg)
+                elif packet.find('ipv4').dstip == ('10.0.2.20'):
+                    msg = of.ofp_flow_mod()
+                    msg.match = of.ofp_match.from_packet(packet)
+                    msg.idle_timeout = 30
+                    msg.hard_timeout = 30
+                    msg.actions.append(of.ofp_action_output(port = 4))
+                    msg.data = packet_in
+                    self.connection.send(msg)
+                elif packet.find('ipv4').dstip == ('10.0.3.30'):
+                    msg = of.ofp_flow_mod()
+                    msg.match = of.ofp_match.from_packet(packet)
+                    msg.idle_timeout = 30
+                    msg.hard_timeout = 30
+                    msg.actions.append(of.ofp_action_output(port = 5))
+                    msg.data = packet_in
+                    self.connection.send(msg)
+                elif packet.find('ipv4').dstip == ('10.0.4.10'):
+                    msg = of.ofp_flow_mod()
+                    msg.match = of.ofp_match.from_packet(packet)
+                    msg.idle_timeout = 30
+                    msg.hard_timeout = 30
+                    msg.data = packet_in
+                    self.connection.send(msg)
+            else:
+                if packet.find('ipv4').dstip == ('10.0.1.10'):
+                    msg = of.ofp_flow_mod()
+                    msg.match = of.ofp_match.from_packet(packet)
+                    msg.idle_timeout = 30
+                    msg.hard_timeout = 30
+                    msg.actions.append(of.ofp_action_output(port = 3))
+                    msg.data = packet_in
+                    self.connection.send(msg)
+                elif packet.find('ipv4').dstip == ('10.0.2.20'):
+                    msg = of.ofp_flow_mod()
+                    msg.match = of.ofp_match.from_packet(packet)
+                    msg.idle_timeout = 30
+                    msg.hard_timeout = 30
+                    msg.actions.append(of.ofp_action_output(port = 4))
+                    msg.data = packet_in
+                    self.connection.send(msg)
+                elif packet.find('ipv4').dstip == ('10.0.3.30'):
+                    msg = of.ofp_flow_mod()
+                    msg.match = of.ofp_match.from_packet(packet)
+                    msg.idle_timeout = 30
+                    msg.hard_timeout = 30
+                    msg.actions.append(of.ofp_action_output(port = 5))
+                    msg.data = packet_in
+                    self.connection.send(msg)
+                elif packet.find('ipv4').dstip == ('10.0.4.10'):
+                    msg = of.ofp_flow_mod()
+                    msg.match = of.ofp_match.from_packet(packet)
+                    msg.idle_timeout = 30
+                    msg.hard_timeout = 30
+                    msg.actions.append(of.ofp_action_output(port = 7))
+                    msg.data = packet_in
+                    self.connection.send(msg)
+                elif packet.find('ipv4').dstip == ('172.16.10.100'):
+                    msg = of.ofp_flow_mod()
+                    msg.match = of.ofp_match.from_packet(packet)
+                    msg.idle_timeout = 30
+                    msg.hard_timeout = 30
+                    msg.actions.append(of.ofp_action_output(port = 6))
+                    msg.data = packet_in
+                    self.connection.send(msg)
         else:
         # check for IP traffic
             if packet.find('ipv4') is not None:
